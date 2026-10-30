@@ -1,2 +1,3 @@
-#ignorar los archivos de Python
-*.py
+# ignorar el archivo credenciales.py
+
+credenciales.py

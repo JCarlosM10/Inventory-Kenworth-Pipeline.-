@@ -16,7 +16,7 @@ La extracción es **sintética**: no consume una API externa ni representa datos
    - La función devuelve los datos en memoria; por sí sola no escribe archivos.
 
 2. **Limpieza y transformación**
-   - [`etl_refacciones.py`](./etl_refacciones.py) contiene la ruta principal: genera los registros, convierte `fecha_ultima_actualizacion` a fecha, calcula `valor_inventario_total = stock_actual * costo_unitario_usd` y asigna `estado_inventario`.
+   - [`etl_refacciones.py`](./etl_refacciones.py) (not commited) contiene la ruta principal: genera los registros, convierte `fecha_ultima_actualizacion` a fecha, calcula `valor_inventario_total = stock_actual * costo_unitario_usd` y asigna `estado_inventario`.
    - La regla de estado de este script es:
      - `DESABASTO_CRITICO`: stock igual a 0.
      - `REORDEN_REQUERIDO`: stock menor o igual al mínimo.
@@ -58,9 +58,28 @@ No hay un archivo de dependencias en el repositorio; instala esos paquetes en el
 
 ### Ejecutar el pipeline principal
 
-Antes de ejecutarlo, configura `DB_CONN` en [`etl_refacciones.py`](./etl_refacciones.py) con una URI válida de SQLAlchemy para PostgreSQL, por ejemplo el formato `postgresql+psycopg2://usuario:contraseña@host:5432/base_de_datos`. No guardes credenciales reales en el repositorio.
+Antes de ejecutar cualquiera de los pipelines, crea el módulo local de configuración a partir de la plantilla:
+
+```powershell
+Copy-Item credenciales.py.example credenciales.py
+```
+
+El archivo local `credenciales.py` está ignorado por Git. `crear_db_conn()` obtiene `DB_USER` y `DB_PASSWORD` del entorno y construye una URL de SQLAlchemy, escapando correctamente caracteres especiales en las credenciales. Este escape no cifra la contraseña: no la guardes en el repositorio ni imprimas la URL en logs. También puedes definir `DB_HOST` (por defecto `localhost`), `DB_PORT` (por defecto `5432`) y `DB_NAME` (por defecto `kenworth_db`).
+
+En PowerShell, configura las variables requeridas para la sesión:
+
+```powershell
+$env:DB_USER = "usuario"
+$env:DB_PASSWORD = "contraseña"
+```
 
 Desde la raíz del proyecto:
+
+```powershell
+python main.py
+```
+
+Para ejecutar la ruta que genera un inventario nuevo:
 
 ```powershell
 python etl_refacciones.py

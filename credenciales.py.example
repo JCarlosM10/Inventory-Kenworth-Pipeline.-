@@ -1,0 +1,30 @@
+import os
+
+from sqlalchemy.engine import URL
+
+
+def crear_db_conn() -> URL:
+    usuario = os.environ.get("DB_USER")
+    contrasena = os.environ.get("DB_PASSWORD")
+    faltantes = [
+        variable
+        for variable, valor in (
+            ("DB_USER", usuario),
+            ("DB_PASSWORD", contrasena),
+        )
+        if not valor
+    ]
+    if faltantes:
+        raise ValueError(
+            "Configura las variables de entorno requeridas: "
+            + ", ".join(faltantes)
+        )
+
+    return URL.create(
+        drivername="postgresql+psycopg2",
+        username=usuario,
+        password=contrasena,
+        host=os.environ.get("DB_HOST", "localhost"),
+        port=int(os.environ.get("DB_PORT", "5432")),
+        database=os.environ.get("DB_NAME", "kenworth_db"),
+    )
