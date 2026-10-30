@@ -1,0 +1,13 @@
+sucursal,rank_valor,refaccion_id,nombre_parte,categoria,stock_actual,valor_total_usd
+Celaya Hub,1,KW-1083,componente_83,Suspension,34,118394.12
+Celaya Hub,2,KW-1069,componente_69,Suspension,32,100762.24
+Celaya Hub,3,KW-1067,componente_67,Suspension,32,91216.64
+Comanjilla,1,KW-1091,componente_91,Sistema de frenos,46,158394.56
+Comanjilla,2,KW-1051,componente_51,Suspension,48,125592.95999999999
+Comanjilla,3,KW-1072,componente_72,Electrico,34,116926
+Leon Centro,1,KW-1050,componente_50,Electrico,48,122488.32
+Leon Centro,2,KW-1068,componente_68,Motor PACCAR,40,98497.6
+Leon Centro,3,KW-1034,componente_34,Electrico,29,75079.84
+Silao Ops,1,KW-1084,componente_84,Suspension,46,158103.84
+Silao Ops,2,KW-1077,componente_77,Filtracion,32,109642.24
+Silao Ops,3,KW-1096,componente_96,Electrico,31,102407.88

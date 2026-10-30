@@ -1,0 +1,19 @@
+sucursal,refaccion_id,nombre_parte,categoria,stock_actual,stock_minimo,ventas_ultimo_mes,estado_inventario,dias_cobertura_estimados
+Comanjilla,KW-1048,componente_48,Suspension,0,13,41,DESABASTO_CRITICO,0.0
+Comanjilla,KW-1070,componente_70,Suspension,0,14,31,DESABASTO_CRITICO,0.0
+Comanjilla,KW-1087,componente_87,Suspension,1,12,72,REORDEN_REQUERIDO,0.4
+Comanjilla,KW-1086,componente_86,Filtracion,1,14,60,REORDEN_REQUERIDO,0.5
+Silao Ops,KW-1094,componente_94,Suspension,2,11,32,REORDEN_REQUERIDO,1.9
+Comanjilla,KW-1016,componente_16,Filtracion,3,12,38,REORDEN_REQUERIDO,2.4
+Celaya Hub,KW-1012,componente_12,Motor PACCAR,5,11,62,REORDEN_REQUERIDO,2.4
+Comanjilla,KW-1031,componente_31,Filtracion,6,8,59,REORDEN_REQUERIDO,3.1
+Celaya Hub,KW-1061,componente_61,Electrico,7,12,68,REORDEN_REQUERIDO,3.1
+Celaya Hub,KW-1010,componente_10,Suspension,7,15,53,REORDEN_REQUERIDO,4.0
+Leon Centro,KW-1082,componente_82,Motor PACCAR,8,8,23,REORDEN_REQUERIDO,10.4
+Silao Ops,KW-1056,componente_56,Motor PACCAR,9,11,23,REORDEN_REQUERIDO,11.7
+Celaya Hub,KW-1098,componente_98,Electrico,10,12,24,REORDEN_REQUERIDO,12.5
+Comanjilla,KW-1038,componente_38,Sistema de frenos,12,13,80,REORDEN_REQUERIDO,4.5
+Celaya Hub,KW-1052,componente_52,Suspension,12,15,79,REORDEN_REQUERIDO,4.6
+Celaya Hub,KW-1026,componente_26,Motor PACCAR,12,12,70,REORDEN_REQUERIDO,5.1
+Celaya Hub,KW-1037,componente_37,Motor PACCAR,12,12,28,REORDEN_REQUERIDO,12.9
+Comanjilla,KW-1024,componente_24,Filtracion,13,14,48,REORDEN_REQUERIDO,8.1
